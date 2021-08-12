@@ -11,7 +11,7 @@
     </nav>
     <h1 id="header">Feedback Form</h1>
 
-    <form action="mailto:ajadal@live.com" name="form" method="POST" enctype="text/plain">Feedback
+    <form action="mailto:ajadal@live.com" name="form" method="POST" enctype="text/plain">
         <br><br>
         <label for="F-name">First Name</label>
         <input type="text" id="F-name" name="F-name">
@@ -26,7 +26,9 @@
         <label for="Male">Male</label>
         <input type="radio" id="Male" name="Gender">
         <label for="Female">Female</label>
-        <input type="radio" id="Female" name="Gender"></fieldset>
+        <input type="radio" id="Female" name="Gender">
+        <label for="PreferNottosay">Prefer Not To Say </label>
+        <input type="radio" id="PreferNottosay" name="Gender"></fieldset>
 <br><br>
 <fieldset><legend>
     How did you find this webpage? 
@@ -46,14 +48,15 @@
     <option name="Great!" value="3">Great!</option>
 </select>
 <br><br>
-    <label for="Comments">Comments</label>
-    <textarea id="Comments" name="Comments">Type your comments here</textarea>
+    <label for="Comments" style="text-align: ;">Comments</label>
+    <textarea id="Comments" name="Comments" style="height: 100px ;width: 200px;">Type your comments here</textarea>
     <br><br>
     <input type="submit" id="submit">
-
+    <button onclick="alert('bye')">playbutton</button>
+    <p id="hi">Hi</p>
     </form>
 
-    <footer><details><summary>Disclaimer</summary>This website belongs to Aryan Jadal</details><address>My accounts</address></footer>
+    <footer><details><summary>Disclaimer</summary>©2021 Copyright Aryan Jadal</details></footer>
 
 </body>
 </html>
