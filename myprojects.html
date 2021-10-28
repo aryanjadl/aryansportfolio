@@ -1,0 +1,137 @@
+<!DOCTYPE html>                                                                                                                                                                                                                                                                                
+<html lang="en">                                                                                                                                                                                                                                                                                
+<head>                                                                                                                                                                                                                                                                                 
+    <title>My Projects | Aryan Jadal</title>                                                                                                                                                                                                                                                                                
+    <link rel="stylesheet" href="CSSforotherfinalprojectwebpages.css"> 
+    <script>
+        var num=Math.random()*10;
+        var chosennumber=Math.floor(num)
+        console.log(chosennumber)
+        var names=["Jeff","John","James","Harry"]
+        var chosenword=names[Math.floor(Math.random()*4)];
+        console.log(chosenword)
+    </script> 
+
+</head>                                                                                                                                                                                                                                                                                
+<body>                                                                                                                                                                                                                                                                                
+
+    <nav id = "topnav">        
+        <a href="index.html"> Homepage </a>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+        <a href="MyYoutubeChannel.html"> My Youtube Channel </a>                                                                                                                                                                                                                                                                             
+        <a href="form.html"> Feedback Form</a>  
+        <a href="slideshow.html"> Where I have been</a> 
+        <a href="mycanvas.html"> My Canvas </a>
+   
+
+                                                                                                                                                                                                                                                                                      
+    </nav>                                                                                                                                                                                                                                                         
+    <h1 id="heading">Aryan Jadal</h1>                                                                                                                                                                                                                                                                                
+    <h2>My projects</h2>
+    <fieldset>
+    <h3>Greetings</h3> 
+    <P id="greetings"></P> 
+    </fieldset>  
+
+    <br>
+
+    <fieldset>   
+    <h3>Number Guessing Game</h3>
+    <p>Guess a number in between 1-10</p>
+    <label for="num">Guess the number</label>
+    <input id="num" type="Number">
+    <button onclick="checkguess()" type="button">Submit</button>
+    <p id="message"></p>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+    <h3>Multiplication Table</h3>
+    <label for = "mul">Enter a number here</label>
+    <input id="mul" type="number">
+    <p id="table"></p>
+    <button type="button" onclick="multiplicationtable()">Submit</button>
+    </fieldset>
+
+    <fieldset>
+        <h3>Finding Prime Numbers</h3>
+        <label for = "prime">Enter a number here</label>
+        <input id="prime" type="number">
+        <p id="primenumbers"></p>
+        <button type="button" onclick="checkprimenumber()">Submit</button>    
+    </fieldset>
+
+    <fieldset>
+        <h3>Name Guessing Game</h3>
+        <label for = "name">Enter a name here</label>
+        <input id="name" type="text">
+        <p id="names"></p>
+        <button type="button" onclick="checkname()">Submit</button>    
+    </fieldset>
+    
+
+
+
+    <script>
+        function checkguess(){
+
+        var guessednum=parseInt(document.getElementById("num").value);
+            if(guessednum==chosennumber){
+            document.getElementById("message").innerHTML="You guessed the number correctly! You won the game";
+        }
+        else{document.getElementById("message").innerHTML="You lost, try again!";
+        console.log(chosennumber);
+    }   
+
+    }
+    function getdateandtime(){
+        var today=new Date();
+        var currenthour=today.getHours();
+        var message="";
+        if(currenthour>5 && currenthour<11){
+            message="Good Morning";}
+        if(currenthour>12 && currenthour<15){
+            message="Good Afternoon"}
+        if(currenthour>16 && currenthour<24){
+            message="Good Night"}
+        document.getElementById("greetings").innerHTML=today.toLocaleString()+" "+message;
+    }
+
+    function multiplicationtable(){
+        var num=parseInt(document.getElementById("mul").value);
+        var result=0
+        document.getElementById("table").innerHTML="";
+        for(var i=1; i<=10;i++){
+            result=num*i;
+        document.getElementById("table").innerHTML+=result+' ';
+        }
+    }
+
+    function checkprimenumber(){
+        var num=parseInt(document.getElementById("prime").value);
+        for(var i=2;i<num;i++){
+            if(num%i==0){
+                document.getElementById("primenumbers").innerHTML="This number is not a prime number";
+                break
+            }
+        }
+        if(i==num){
+            document.getElementById("primenumbers").innerHTML="This number is a prime number";
+        }
+    }
+
+    function checkname(){
+        var name=document.getElementById("name").value;
+        if (name==chosenword){
+        document.getElementById("names").innerHTML="You guessed the name correctly!";
+        }
+        else{
+            document.getElementById("names").innerHTML="You didn't guess the name correctly, try again.";
+        }
+    }
+    
+    setInterval(getdateandtime,1000)
+    </script>
+        <footer><details><summary>Disclaimer</summary>This website belongs to Aryan Jadal, Copyright Aryan Jadal</details></footer>                                                                                                                                                                                                                                                                                
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Canvas</title>
+    <link rel="stylesheet" href="CSSforotherfinalprojectwebpages.css">
+    <nav id = "topnav">       
+    <a href="index.html"> Homepage </a>
+    <a href="MyYoutubeChannel.html"> My Youtube Channel </a>
+    <a href="myprojects.html"> My Projects</a>
+    <a href="slideshow.html"> Where I have been</a>   
+    <a href="form.html"> Feedback Form</a>
+
+</head>
+<body>
+    <h1>My Canvas </h1>
+    <canvas id="mycanvas"></canvas>
+    <script>
+        var mycanvas=document.getElementById("mycanvas")
+        mycanvas.width=window.innerWidth-150;
+        mycanvas.height=window.innerHeight-150;
+        var c=mycanvas.getContext("2d");
+        c.fillstyle="red"
+        c.font="40px 'Microsoft JhengHei'"
+        var img = new Image()
+        img.src="balloons.png"
+        var dx=0,dy=mycanvas.height
+        function animate(){
+            c.clearRect(0,0,mycanvas.width, mycanvas.height)
+            c.fillText("Thanks for coming to my website! Please go to the feedback form if you would like.",dx,100)
+            dx=dx+5
+            dy=dy-5
+            c.fillText("Hi",50,50);
+            c.drawImage(img, 50, dy, 500,550)
+            if (dx>mycanvas.width){
+                dx=0
+            }
+            if (dy<0){
+                dy=mycanvas.height
+            }
+
+
+        }
+        setInterval(animate,100)
+    </script>
+</body>
+</html>
