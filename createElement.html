@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Element</title>
+</head>
+<body>
+    <h1>Welcome to my webpage</h1>
+    <div id="addelement" onclick="element(this)">
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat repellat obcaecati, fugiat, officia esse aliquid natus porro, delectus asperiores rem suscipit quae aliquam veritatis doloremque reiciendis id debitis tempora saepe.</p>
+    </div>
+
+    <script>
+        function element(e){
+            var newelement=document.createElement("p")
+            newelement.innerHTML="Hi welcome to this webpage"
+            e.appendChild(newelement)
+        }
+
+    </script>
+</body>
+</html>

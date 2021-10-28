@@ -1,0 +1,19 @@
+body{
+    background-color: lightblue;
+    animation: bgchange 10s linear 2s infinite;
+}
+@keyframes bgchange{
+    0%{
+        background-color: palegoldenrod;
+    }
+    25%{
+        background-color: palegreen;
+    }
+}
+    50%{
+        background-color:blue;
+    }
+    100%{
+        background-color: yellow;
+    }
+    }
