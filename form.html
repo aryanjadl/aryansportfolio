@@ -8,13 +8,19 @@
     <nav id = "topnav">
         <a href="index.html"> Homepage </a>
         <a href="MyYoutubeChannel.html"> My Youtube Channel </a>
+        <a href="myprojects.html"> My Projects</a>
+        <a href="slideshow.html"> Where I have been</a>    
+        <a href="mycanvas.html"> My Canvas </a>
+
+
+
     </nav>
     <h1 id="header">Feedback Form</h1>
 
     <form action="mailto:ajadal@live.com" name="form" method="POST" enctype="text/plain">
         <br><br>
         <label for="F-name">First Name</label>
-        <input type="text" id="F-name" name="F-name">
+        <input  type="text" id="Fname" name="Fname" onkeypress="colorchange();" onkeyup="originalcolor();">
         <br><br>
         <label for="L-Name">Last Name</label>
         <input type="text" id="L-name" name="L-name">
@@ -44,7 +50,7 @@
 <label for = "Rating">How did I do on my website?</label>
 <select id = "Rating" name="Rating">
     <option name="Ok" value="1">Ok</option>
-    <option name="Good" value="2">Good</option>
+    <option name="Good" value="2">Good</option>                                 
     <option name="Great!" value="3">Great!</option>
 </select>
 <br><br>
@@ -52,10 +58,23 @@
     <textarea id="Comments" name="Comments" style="height: 100px ;width: 200px;">Type your comments here</textarea>
     <br><br>
     <input type="submit" id="submit">
-    <button onclick="alert('bye')">playbutton</button>
-    <p id="hi">Hi</p>
+    
     </form>
-
+    <script>
+        function changepage(){
+            alert("Redirecting to different webpage");
+            window.location="https://www.skoolofcode.us/";
+        }
+        function colorchange(){
+            document.getElementById("Fname").style.backgroundColor="blue";
+            
+        }
+        function originalcolor(){
+            document.getElementById("Fname").style.backgroundColor="white";
+        }
+    </script>
+    <p>I learned this project in skoolofcode, click the button to learn more about skoolofcode</p>
+    <button onclick="changepage()">Visit Skool Of Code</button>
     <footer><details><summary>Disclaimer</summary>©2021 Copyright Aryan Jadal</details></footer>
 
 </body>
